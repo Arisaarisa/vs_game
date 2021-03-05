@@ -25,6 +25,7 @@ while ($hp > 0) {
                 if ($attack == 5) {
                     echo $techniques[5] . "の攻撃!!" . PHP_EOL;
                 }
+
             $attack = rand(500, 3000);
             if ($attack >= 2000) {
                 echo "クリティカルヒット！！" . PHP_EOL;
