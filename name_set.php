@@ -10,12 +10,14 @@
         <title>VS-GAME</title>
     </head>
     <body>
-        <div id="home" class="home_bg">
+        <div id="name_page" class="home_bg">
             <div class="home_content wrapper">
-                <h1 class="home_title">Fighting GAME</h1>
-                <a href="name_set.php" class="button" id="start_btn">
-                        PLAY
-                </a>
+                <h1 class="name_title">名前を入力してください。</h1>
+                <form action="game.php" method="get" class="set_game">
+                    <!-- <input type="image" src="images/pipo-boss004.png" alt="キャラ1"　name> -->
+                    <input type="text" name="name_is">
+                    <input type="submit" class="button" id="set_btn" value="対戦開始">
+                </form>
             </div>
         </div>
     </body> 

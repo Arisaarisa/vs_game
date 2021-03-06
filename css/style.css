@@ -12,7 +12,7 @@ img {
 a {
     text-decoration: none;
 }
-
+/* --------------------- */
 /* start-page */
 #home {
     background-image: url("../images/pipo-battlebg004.jpg");
@@ -48,16 +48,6 @@ a {
 /* クリックした時に少しプッシュしたような動きになる処理 */
 .button {
     transition: 0.2ms;
-}
-.button:active {
-    transform: translateY(6px);
-}
-/* ボタンの外枠を消す */
-.button:focus {
-    outline:none;
-}
-/* ボタンデザイン */
-#start_btn {
     display: inline-block;
     width: auto;
     text-align: center;
@@ -71,4 +61,39 @@ a {
     box-shadow: 0 12px #aaaa0b;
     /* 角を丸くする */
     border-radius:10px;
+}
+.button:active {
+    transform: translateY(6px);
+}
+/* ボタンの外枠を消す */
+.button:focus {
+    outline:none;
+}
+/* ボタンデザイン */
+#start_btn {
+}
+/* --------------------- */
+/* name_setpage */
+#name_page {
+    background-image: url("../images/pipo-battlebg001a.jpg");
+    min-height: 100vh;
+    text-transform: none;
+}
+.name_title {
+    margin-top: 0;
+    padding-top: 20%;
+    align-self: start;
+    text-align: center;
+    font-size: 30px;
+}
+.set_game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.set_game input {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
 }
