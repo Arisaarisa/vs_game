@@ -97,3 +97,61 @@ a {
     font-size: 40px;
     margin-top: 20px;
 }
+/* --------------------- */
+/* game.php */
+.fight_title {
+    margin-top: 10%;
+    align-self: start;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150px;
+    /* テキストをグラデーションにする */
+    background: linear-gradient(to bottom right, red,rgb(250, 233, 2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.attack_q {
+    margin-top: -6%;
+    display: grid;
+    grid-template-areas: 
+        "box1 box2 box3"
+        "box4 box2 box3"
+    ;
+    justify-content: center;
+    gap: 30px;
+}
+.attack_q p {
+    font-size: 30px;
+}
+.q_name {
+    grid-area: box1;
+    align-self: start;
+}
+.q_skill {
+    align-self: end;
+    grid-area: box1;
+    margin-top: 76px;
+}
+#attack_form {
+    display: flex;
+    flex-direction: column;
+    grid-area: box2;
+}
+#attack_select {
+    margin: auto;
+    font-size: 30px;
+    font-family: 'DotGothic16', sans-serif;
+}
+#attack_button {
+    margin: auto;
+    margin-top: 20%;
+    font-size: 40px;
+    font-family: 'DotGothic16', sans-serif;
+}
+.match_report {
+    display: flex;
+    justify-content: center;
+}
+.result {
+    font-size: 80px;
+}
