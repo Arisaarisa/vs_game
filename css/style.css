@@ -150,7 +150,7 @@ a {
 }
 .match_report {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .result {
     font-size: 80px;
