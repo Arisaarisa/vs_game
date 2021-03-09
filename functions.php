@@ -15,7 +15,7 @@ function createAttackMsg($player_name, $attack_name, $attack, $enemy_hp) {
 }
 
 function createEnemyAttackMsg($damage, $player_name, $my_hp) {
-    $msg = "<br>敵は攻撃をした！！！";
+    $msg = "敵は攻撃をした！！！";
     if ($damage > 2000) {
         $msg .= "<br>クリティカルヒット！！！";
     }
