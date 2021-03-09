@@ -13,9 +13,9 @@
         <div id="name_page" class="home_bg">
             <div class="home_content wrapper">
                 <h1 class="name_title">名前を入力してください。</h1>
-                <form action="game.php" method="get" class="set_game">
+                <form action="game.php" method="post" class="set_game">
                     <!-- <input type="image" src="images/pipo-boss004.png" alt="キャラ1"　name> -->
-                    <input type="text" name="name_is">
+                    <input type="text" name="player_name">
                     <input type="submit" class="button" id="set_btn" value="対戦開始">
                 </form>
             </div>
