@@ -50,14 +50,11 @@ if ($attack_pattern) {
             $attack = rand(500, 3000);
             $enemy_hp = max($enemy_hp - $attack, 0);
 
-            $msg = "${player_name} は ${attack_name}の攻撃をした！！";
-            if ($attack > 2000) {
-                $msg .= "<br>クリティカルヒット！！！";
-            }
-            $msg .= "<br>攻撃力: ${attack}の攻撃！<br>敵のHP: ${enemy_hp}";
+            // 攻撃メッセージ作成
+            $attack_msg = createAttackMsg($player_name, $attack_name, $attack, $enemy_hp);
 
             break;
-        defalut:
+            defalut:
             $msg = "攻撃に失敗";
     }
 
@@ -65,20 +62,11 @@ if ($attack_pattern) {
     $damage = rand(500, 3000);
     $my_hp = max($my_hp - $damage, 0);
 
-    $msg .= "<br>敵は攻撃をした！！！";
-    if ($damage > 2000) {
-        $msg .= "<br>クリティカルヒット！！！";
-    }
-    $msg .= "<br>攻撃力: ${damage}の攻撃！<br>${player_name}のHP: ${my_hp}";
+    // 敵の攻撃メッセージ作成
+    $enemy_attack_msg = createEnemyAttackMsg($damage, $player_name, $my_hp);
 
-    // それぞれのHP確認
-    if ($my_hp === 0 && $enemy_hp > 0) {
-        $end_msg = "<br>${player_name} は負けた。。。";
-    } elseif ($my_hp === 0 && $enemy_hp === 0) {
-        $end_msg = "<br>引き分け！！！";
-    } elseif ($my_hp > 0 && $enemy_hp === 0) {
-        $end_msg = "<br>${player_name} は敵を倒した！！！";
-    }
+    // 終了メッセージ作成
+    $end_msg = createEndMsg($player_name, $my_hp, $enemy_hp);
 }
 ?>
 <!DOCTYPE html>
@@ -98,7 +86,10 @@ if ($attack_pattern) {
     <div id="game_page" class="home_bg">
         <div class="home_content wrapper">
             <h1 class="name_title">FIGHT!!</h1>
-            <?php if (empty($end_msg)): ?>
+            <p><?= $attack_msg ?></p>
+            <p><?= $enemy_attack_msg ?></p>
+
+            <?php if (empty($end_msg)) : ?>
                 <p><?= h($player_name) ?>さん</p>
                 <p>攻撃技は？</p>
                 <form action="" method="post">
@@ -112,10 +103,9 @@ if ($attack_pattern) {
                     <input type="hidden" name="enemy_hp" value="<?= $enemy_hp ?>">
                     <input type="submit" value="攻撃">
                 </form>
-            <?php else: ?>
+            <?php else : ?>
                 <p><?= $end_msg ?></p>
             <?php endif; ?>
-            <p><?= $msg ?></p>
         </div>
     </div>
 </body>
