@@ -59,3 +59,32 @@ while ($hp > 0) {
 };
 
 echo '敵を倒した!!';
+
+
+
+
+
+//キャラ選択したい　これは動きません
+echo $_POST;
+$player_characters = [
+    1 =>'images/pipo-boss004.png',
+    2 => 'images/pipo-enemy018.png',
+    3 => 'images/pipo-enemy033.png',
+    4 => 'images/pipo-enemy037b.png'
+];
+
+$character_pattern = filter_input(INPUT_POST, "character_pattern", FILTER_VALIDATE_INT);
+
+if ($character_pattern) {
+        switch ($character_pattern) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            if ($player_characters) {
+                foreach ($player_characters as $player_character) {
+                    echo "<img src=\"{$player_character}\">";
+                }
+            }  
+}
+}

@@ -76,15 +76,22 @@ if ($attack_pattern) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap | family=Bangers&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DotGothic16&display=swap" rel="stylesheet">
     <title>VS-GAME</title>
 </head>
 
 <body>
     <div id="game_page" class="home_bg">
         <div class="home_content wrapper">
-            <h1 class="fight_title">FIGHT!!</h1>
+            <div class="character">
+                <div>
+                    <img src="images/pipo-enemy041b.png" alt="">
+                </div>
+                <div>
+                    <img src="images/pipo-enemy033.png" alt="">
+                </div>
+            </div>
+            <h1 class="top_title" id="fight_title">FIGHT!!</h1>
             <?php if (empty($end_msg)) : ?>
                 <div class="attack_q">
                     <p class="q_name"><?= h($player_name) ?>さん</p>
@@ -99,15 +106,20 @@ if ($attack_pattern) {
                             <input type="hidden" name="player_name" value="<?= $player_name ?>">
                             <input type="hidden" name="my_hp" value="<?= $my_hp ?>">
                             <input type="hidden" name="enemy_hp" value="<?= $enemy_hp ?>">
-                            <input type="submit" value="攻撃" class="button" id="attack_button">
+                            <input type="submit" value="攻撃" class="btn" id="attack_button">
                         </form>
                     </div>
             <?php else : ?>
-                <p class="result"><?= $end_msg ?></p>
+                <p class="result_txt"><?= $end_msg ?></p>
+                <a href="start.php" class="btn" id="back_btn">スタートへ戻る</a>
             <?php endif; ?>
             <div class="match_report">
                 <p><?= $attack_msg ?></p>
                 <p><?= $enemy_attack_msg ?></p>
+            </div>
+            <div class="heart_point">
+                <p><?= $player_name ?>のHP :　<?= $my_hp ?></p>
+                <p>敵のHP : <?= $enemy_hp ?></p>
             </div>
         </div>
     </div>

@@ -12,26 +12,31 @@ img {
 a {
     text-decoration: none;
 }
+/* テキストの大文字小文字設定しない */
+/* #home #name_page　#game_page　.top_title #fight_title　.result_txt {
+    text-transform: none;
+} */
 /* --------------------- */
 /* start-page */
 #home {
     background-image: url("../images/pipo-battlebg004.jpg");
-    min-height: 100vh;
 }
 /* 背景画像処理 */
 .home_bg {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    text-transform: none;
 }
 /* テキストの大文字小文字設定しない */
-#home .home_title {
+#home .top_title .result_txt {
     text-transform: none;
 }
 .home_content {
     text-align: center;
 }
-.home_title {
+.top_title {
     margin-top: 0;
     padding-top: 20%;
     align-self: start;
@@ -46,7 +51,7 @@ a {
 ;
 }
 /* クリックした時に少しプッシュしたような動きになる処理 */
-.button {
+.btn {
     transition: 0.2ms;
     display: inline-block;
     width: auto;
@@ -61,6 +66,8 @@ a {
     box-shadow: 0 12px #aaaa0b;
     /* 角を丸くする */
     border-radius:10px;
+    /* 一番前へ */
+    z-index: 9999999;
 }
 .button:active {
     transform: translateY(6px);
@@ -99,19 +106,28 @@ a {
 }
 /* --------------------- */
 /* game.php */
-.fight_title {
-    margin-top: 10%;
-    align-self: start;
-    text-align: center;
-    font-weight: bold;
+#game_page {
+    background-image: url("../images/pipo-battlebg003.jpg");
+}
+.character {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#fight_title {
     font-size: 150px;
     /* テキストをグラデーションにする */
     background: linear-gradient(to bottom right, red,rgb(250, 233, 2));
     -webkit-background-clip: text;
+    font-family: 'Bangers', cursive;
     color: transparent;
+    margin-bottom: 0;
 }
 .attack_q {
-    margin-top: -6%;
+    margin-top: 0;
     display: grid;
     grid-template-areas: 
         "box1 box2 box3"
@@ -138,6 +154,7 @@ a {
     grid-area: box2;
 }
 #attack_select {
+    z-index: 9999999;
     margin: auto;
     font-size: 30px;
     font-family: 'DotGothic16', sans-serif;
@@ -151,7 +168,29 @@ a {
 .match_report {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    margin-top: -7%;
 }
-.result {
-    font-size: 80px;
+.match_report p {
+    margin: 0 20px;
+}
+.heart_point {
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 20px;
+    color: tomato;
+}
+.result_txt {
+    z-index: 9999999;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 0;
+    line-height: 50%;
+}
+#back_btn {
+    position: relative;
+    font-size: 24px;
 }
