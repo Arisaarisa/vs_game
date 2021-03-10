@@ -1,13 +1,3 @@
-<?php
-    $max_txt = 11;
-    $telLength = strlen($player_name);
-
-    if ($max_txt < $telLength || $telLength < $max_txt) {
- // 制限値を未満/以上の場合、エラーメッセージを設定
-        $errMsg = '携帯電話番号は11桁で入力して下さい';
-}
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
