@@ -47,19 +47,19 @@ if ($attack_pattern) {
             $attack_name = $attack_patterns[$attack_pattern];
 
             // 自分の攻撃
-            $attack = rand(500, 3000);
+            $attack = rand(0, 3000);
             $enemy_hp = max($enemy_hp - $attack, 0);
 
             // 攻撃メッセージ作成
             $attack_msg = createAttackMsg($player_name, $attack_name, $attack, $enemy_hp);
 
             break;
-            defalut:
-            $msg = "攻撃に失敗";
+            // defalut:
+            // $msg = "攻撃に失敗";
     }
 
     // 敵の攻撃
-    $damage = rand(500, 3000);
+    $damage = rand(0, 3000);
     $my_hp = max($my_hp - $damage, 0);
 
     // 敵の攻撃メッセージ作成

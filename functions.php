@@ -10,6 +10,9 @@ function createAttackMsg($player_name, $attack_name, $attack, $enemy_hp) {
     if ($attack > 2000) {
         $msg .= "<br>クリティカルヒット！！！";
     }
+    if ($attack === 0) {
+        $msg .= "<br>攻撃失敗！";
+    }
     $msg .= "<br>攻撃力: ${attack}の攻撃！<br>敵のHP: ${enemy_hp}";
     return $msg;
 }
@@ -18,6 +21,9 @@ function createEnemyAttackMsg($damage, $player_name, $my_hp) {
     $msg = "敵は攻撃をした！！！";
     if ($damage > 2000) {
         $msg .= "<br>クリティカルヒット！！！";
+    }
+    if ($damage === 0) {
+        $msg .= "<br>攻撃失敗！";
     }
     $msg .= "<br>攻撃力: ${damage}の攻撃！<br>${player_name}のHP: ${my_hp}";
     return $msg;
