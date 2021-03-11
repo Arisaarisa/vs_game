@@ -13,7 +13,7 @@
                 <h1 class="name_title">名前を入力してください。</h1>
                 <form action="game.php" method="post" class="set_game">
                     <input type="text" maxlength='12' name="player_name">
-                    <input type="submit" class="btn" id="set_btn" value="対戦開始">
+                    <input type="submit" class="btn" value="対戦開始">
                 </form>
             </div>
         </div>

@@ -159,7 +159,7 @@ a {
     font-size: 30px;
     font-family: 'DotGothic16', sans-serif;
 }
-#attack_button {
+.attack_btn {
     margin: auto;
     margin-top: 20%;
     font-size: 40px;
@@ -172,7 +172,7 @@ a {
     margin-top: -7%;
 }
 .match_report p {
-    margin: 0 20px;
+    margin: 10px 20px 0 20px;
 }
 .heart_point {
     display: flex;

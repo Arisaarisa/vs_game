@@ -101,7 +101,7 @@ if ($attack_pattern) {
                             <input type="hidden" name="player_name" value="<?= $player_name ?>">
                             <input type="hidden" name="my_hp" value="<?= $my_hp ?>">
                             <input type="hidden" name="enemy_hp" value="<?= $enemy_hp ?>">
-                            <input type="submit" value="攻撃" class="btn" id="attack_button">
+                            <input type="submit" value="攻撃" class="btn attack_btn">
                         </form>
                     </div>
             <?php else : ?>
