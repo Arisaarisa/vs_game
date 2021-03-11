@@ -84,18 +84,13 @@ if ($attack_pattern) {
     <div id="game_page" class="home_bg">
         <div class="home_content wrapper">
             <div class="character">
-                <div>
-                    <img src="images/pipo-enemy041b.png" alt="">
-                </div>
-                <div>
-                    <img src="images/pipo-enemy033.png" alt="">
-                </div>
+                <img src="images/me.png" alt="自分">
+                <img src="images/enemy.png" alt="敵" class="enemy_right">
             </div>
             <h1 class="top_title" id="fight_title">FIGHT!!</h1>
             <?php if (empty($end_msg)) : ?>
                 <div class="attack_q">
                     <p class="q_name"><?= h($player_name) ?>さん</p>
-                    <?php "<img src=\"{$player_character}\">" ?>
                     <p class="q_skill">攻撃技は？</p>
                     <form action="" method="post" id="attack_form">
                         <select name="attack_pattern" id="attack_select">

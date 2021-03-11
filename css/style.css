@@ -12,14 +12,10 @@ img {
 a {
     text-decoration: none;
 }
-/* テキストの大文字小文字設定しない */
-/* #home #name_page　#game_page　.top_title #fight_title　.result_txt {
-    text-transform: none;
-} */
 /* --------------------- */
 /* start-page */
 #home {
-    background-image: url("../images/pipo-battlebg004.jpg");
+    background-image: url("../images/back1.jpg");
 }
 /* 背景画像処理 */
 .home_bg {
@@ -30,7 +26,7 @@ a {
     text-transform: none;
 }
 /* テキストの大文字小文字設定しない */
-#home .top_title .result_txt {
+#home .top_title  {
     text-transform: none;
 }
 .home_content {
@@ -58,6 +54,7 @@ a {
     text-align: center;
     background-color: #FFFF00;
     border: none;
+    font-family: 'DotGothic16', sans-serif;
     font-size: 50px;
     color: red;
     font-weight: bold;
@@ -82,7 +79,7 @@ a {
 /* --------------------- */
 /* name_setpage */
 #name_page {
-    background-image: url("../images/pipo-battlebg001a.jpg");
+    background-image: url("../images/back2.jpg");
     min-height: 100vh;
     text-transform: none;
 }
@@ -103,11 +100,12 @@ a {
     font-family: 'DotGothic16', sans-serif;
     font-size: 40px;
     margin-top: 20px;
+    text-transform: none;
 }
 /* --------------------- */
 /* game.php */
 #game_page {
-    background-image: url("../images/pipo-battlebg003.jpg");
+    background-image: url("../images/back3.jpg");
 }
 .character {
     position: absolute;
@@ -116,6 +114,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.enemy_right {
+    margin-right: 3%;
 }
 #fight_title {
     font-size: 150px;
@@ -178,17 +179,19 @@ a {
 .heart_point {
     display: flex;
     justify-content: space-between;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0 20px;
     color: tomato;
 }
 .result_txt {
     z-index: 9999999;
-    font-size: 70px;
+    font-size: 50px;
+    color: blue;
     text-align: center;
     margin-top: 0;
     line-height: 50%;
+    text-transform: none;
 }
 #back_btn {
     position: relative;
