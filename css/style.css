@@ -125,7 +125,7 @@ a {
 .enemy_right {
     margin-right: 3%;
 }
-#fight_title {
+.fight_title {
     font-size: 150px;
     /* テキストをグラデーションにする */
     background: linear-gradient(to bottom right, red,rgb(250, 233, 2));
@@ -134,8 +134,8 @@ a {
     color: transparent;
     margin-bottom: 0;
 }
-.attack_q {
-    margin-top: 0;
+.q_attack {
+    margin-top: 3%;
     display: grid;
     grid-template-areas: 
         "box1 box2 box3"
@@ -144,7 +144,7 @@ a {
     justify-content: center;
     gap: 30px;
 }
-.attack_q p {
+.q_attack p {
     font-size: 30px;
 }
 .q_name {
@@ -161,15 +161,14 @@ a {
     flex-direction: column;
     grid-area: box2;
 }
-#attack_select {
+.attack_select {
     z-index: 9999999;
     margin: auto;
     font-size: 30px;
     font-family: 'DotGothic16', sans-serif;
 }
 .attack_btn {
-    margin: auto;
-    margin-top: 20%;
+    margin-top: 3%;
     font-size: 40px;
 }
 .match_report {
@@ -177,10 +176,10 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     font-size: 20px;
-    margin-top: -4%;
+    margin-top: -6%;
 }
 .match_report p {
-    margin: 10px 20px 0 20px;
+    margin: 10px 20px;
 }
 .heart_point {
     display: flex;
@@ -199,7 +198,7 @@ a {
     line-height: 50%;
     text-transform: none;
 }
-#back_btn {
+.back_btn {
     position: relative;
     margin-top: 5%;
     font-size: 24px;

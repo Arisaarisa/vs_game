@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css">
-        <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>VS-GAME</title>
     </head>
     <body>
