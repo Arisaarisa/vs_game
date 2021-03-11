@@ -35,7 +35,6 @@ if (empty($enemy_hp)) {
 $attack_pattern = filter_input(INPUT_POST, "attack_pattern", FILTER_VALIDATE_INT);
 
 if ($attack_pattern) {
-
     switch ($attack_pattern) {
         case 1:
         case 2:
@@ -74,9 +73,10 @@ if ($attack_pattern) {
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>VS-GAME</title>
 </head>
 
@@ -84,34 +84,29 @@ if ($attack_pattern) {
     <div id="game_page" class="home_bg">
         <div class="home_content wrapper">
             <div class="character">
-                <div>
-                    <img src="images/pipo-enemy041b.png" alt="">
-                </div>
-                <div>
-                    <img src="images/pipo-enemy033.png" alt="">
-                </div>
+                <img src="images/me.png" alt="自分">
+                <img src="images/enemy.png" alt="敵" class="enemy_right">
             </div>
-            <h1 class="top_title" id="fight_title">FIGHT!!</h1>
+            <h1 class="top_title fight_title">FIGHT!!</h1>
             <?php if (empty($end_msg)) : ?>
-                <div class="attack_q">
+                <div class="q_attack">
                     <p class="q_name"><?= h($player_name) ?>さん</p>
-                    <?php "<img src=\"{$player_character}\">" ?>
                     <p class="q_skill">攻撃技は？</p>
                     <form action="" method="post" id="attack_form">
-                        <select name="attack_pattern" id="attack_select">
+                        <select name="attack_pattern" class="txt_flame attack_select">
                             <?php foreach ($attack_patterns as $key => $value) : ?>
                                 <option value="<?= $key ?>"><?= $value ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <input type="hidden" name="player_name" value="<?= $player_name ?>">
-                            <input type="hidden" name="my_hp" value="<?= $my_hp ?>">
-                            <input type="hidden" name="enemy_hp" value="<?= $enemy_hp ?>">
-                            <input type="submit" value="攻撃" class="btn" id="attack_button">
-                        </form>
-                    </div>
+                            <?php endforeach; ?>
+                        </select>
+                        <input type="hidden" name="player_name" value="<?= $player_name ?>">
+                        <input type="hidden" name="my_hp" value="<?= $my_hp ?>">
+                        <input type="hidden" name="enemy_hp" value="<?= $enemy_hp ?>">
+                        <input type="submit" value="攻撃" class="btn attack_btn">
+                    </form>
+                </div>
             <?php else : ?>
                 <p class="result_txt"><?= $end_msg ?></p>
-                <a href="start.php" class="btn" id="back_btn">スタートへ戻る</a>
+                <a href="start.php" class="btn back_btn">スタートへ戻る</a>
             <?php endif; ?>
             <div class="match_report">
                 <p><?= $attack_msg ?></p>

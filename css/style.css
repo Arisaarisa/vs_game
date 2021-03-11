@@ -12,14 +12,10 @@ img {
 a {
     text-decoration: none;
 }
-/* テキストの大文字小文字設定しない */
-/* #home #name_page　#game_page　.top_title #fight_title　.result_txt {
-    text-transform: none;
-} */
 /* --------------------- */
 /* start-page */
 #home {
-    background-image: url("../images/pipo-battlebg004.jpg");
+    background-image: url("../images/back1.jpg");
 }
 /* 背景画像処理 */
 .home_bg {
@@ -30,7 +26,7 @@ a {
     text-transform: none;
 }
 /* テキストの大文字小文字設定しない */
-#home .top_title .result_txt {
+#home .top_title  {
     text-transform: none;
 }
 .home_content {
@@ -58,6 +54,7 @@ a {
     text-align: center;
     background-color: #FFFF00;
     border: none;
+    font-family: 'DotGothic16', sans-serif;
     font-size: 50px;
     color: red;
     font-weight: bold;
@@ -76,13 +73,14 @@ a {
 .button:focus {
     outline:none;
 }
-/* ボタンデザイン */
-#start_btn {
+.play_btn {
+    margin-top: 5%;
 }
+
 /* --------------------- */
 /* name_setpage */
 #name_page {
-    background-image: url("../images/pipo-battlebg001a.jpg");
+    background-image: url("../images/back2.jpg");
     min-height: 100vh;
     text-transform: none;
 }
@@ -103,11 +101,18 @@ a {
     font-family: 'DotGothic16', sans-serif;
     font-size: 40px;
     margin-top: 20px;
+    text-transform: none;
 }
+.txt_flame {
+    background: rgba(255, 255, 255, 0.65);
+    border:4px solid black;
+    border-radius: 5px;
+}
+
 /* --------------------- */
 /* game.php */
 #game_page {
-    background-image: url("../images/pipo-battlebg003.jpg");
+    background-image: url("../images/back3.jpg");
 }
 .character {
     position: absolute;
@@ -117,7 +122,10 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-#fight_title {
+.enemy_right {
+    margin-right: 3%;
+}
+.fight_title {
     font-size: 150px;
     /* テキストをグラデーションにする */
     background: linear-gradient(to bottom right, red,rgb(250, 233, 2));
@@ -126,8 +134,8 @@ a {
     color: transparent;
     margin-bottom: 0;
 }
-.attack_q {
-    margin-top: 0;
+.q_attack {
+    margin-top: 3%;
     display: grid;
     grid-template-areas: 
         "box1 box2 box3"
@@ -136,7 +144,7 @@ a {
     justify-content: center;
     gap: 30px;
 }
-.attack_q p {
+.q_attack p {
     font-size: 30px;
 }
 .q_name {
@@ -153,44 +161,46 @@ a {
     flex-direction: column;
     grid-area: box2;
 }
-#attack_select {
+.attack_select {
     z-index: 9999999;
     margin: auto;
     font-size: 30px;
     font-family: 'DotGothic16', sans-serif;
 }
-#attack_button {
-    margin: auto;
-    margin-top: 20%;
+.attack_btn {
+    margin-top: 3%;
     font-size: 40px;
-    font-family: 'DotGothic16', sans-serif;
 }
 .match_report {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     font-size: 20px;
-    margin-top: -7%;
+    margin-top: -5%;
 }
 .match_report p {
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 .heart_point {
     display: flex;
     justify-content: space-between;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 0 20px;
+    margin: 10px 20px;
     color: tomato;
 }
 .result_txt {
+    position: relative;
     z-index: 9999999;
-    font-size: 70px;
+    font-size: 50px;
+    color: blue;
     text-align: center;
     margin-top: 0;
     line-height: 50%;
+    text-transform: none;
 }
-#back_btn {
+.back_btn {
     position: relative;
+    margin-top: 5%;
     font-size: 24px;
 }
