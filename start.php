@@ -11,7 +11,7 @@
         <div id="home" class="home_bg">
             <div class="home_content wrapper">
                 <h1 class="top_title">FIGHTING GAME</h1>
-                <a href="name_set.php" class="btn" id="start_btn">
+                <a href="name_set.php" class="btn">
                         PLAY
                 </a>
             </div>
