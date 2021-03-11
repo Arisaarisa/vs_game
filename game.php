@@ -74,6 +74,7 @@ if ($attack_pattern) {
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress@3.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=DotGothic16&display=swap" rel="stylesheet">
@@ -93,7 +94,7 @@ if ($attack_pattern) {
                     <p class="q_name"><?= h($player_name) ?>さん</p>
                     <p class="q_skill">攻撃技は？</p>
                     <form action="" method="post" id="attack_form">
-                        <select name="attack_pattern" id="attack_select">
+                        <select name="attack_pattern" id="attack_select" class="txt_flame">
                             <?php foreach ($attack_patterns as $key => $value) : ?>
                                 <option value="<?= $key ?>"><?= $value ?></option>
                                 <?php endforeach; ?>
