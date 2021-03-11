@@ -176,7 +176,7 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     font-size: 20px;
-    margin-top: -6%;
+    margin-top: -5%;
 }
 .match_report p {
     margin: 10px 20px;
@@ -190,6 +190,7 @@ a {
     color: tomato;
 }
 .result_txt {
+    position: relative;
     z-index: 9999999;
     font-size: 50px;
     color: blue;
