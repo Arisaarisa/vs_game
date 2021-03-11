@@ -73,6 +73,9 @@ a {
 .button:focus {
     outline:none;
 }
+.play_btn {
+    margin-top: 5%;
+}
 
 /* --------------------- */
 /* name_setpage */
